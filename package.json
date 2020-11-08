@@ -7,7 +7,7 @@
     "node": "12.x"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "node ./bin/www",
     "test": "echo \"No Test set up\" && exit 1"
   },
   "keywords": [
