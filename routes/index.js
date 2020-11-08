@@ -1,14 +1,10 @@
 const http = require('http');
 const hostname = 'localhost';
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
+app.listen(port);
 
 var friends = require("./friends.json");
-const router = require("./users");
-//const express = require("express"); // Once for all times
-
-//const router = express.Router();
-
-
+const app = require("../app"); // Once for all times
 
 const server = http.createServer((request, response) => {
     response.statusCode = 200;
@@ -71,11 +67,8 @@ const server = http.createServer((request, response) => {
     response.end();
 });
 
-var server_port = process.env.YOUR_PORT || process.env.PORT || 80;
-var server_host = process.env.YOUR_HOST || '0.0.0.0';
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
 
 
-module.exports = router;
