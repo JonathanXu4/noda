@@ -1,7 +1,7 @@
 const http = require('http');
 const hostname = 'localhost';
 const port = process.env.PORT || 3000;
-app.listen(port);
+
 
 var friends = require("./friends.json");
 const app = require("../app"); // Once for all times
@@ -72,3 +72,4 @@ server.listen(port, hostname, () => {
 });
 
 
+app.listen(port);
