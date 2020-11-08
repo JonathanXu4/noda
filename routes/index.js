@@ -3,6 +3,7 @@ const hostname = 'localhost';
 const port = process.env.PORT || 5000;
 
 var friends = require("./friends.json");
+const router = require("./users");
 //const express = require("express"); // Once for all times
 
 //const router = express.Router();
