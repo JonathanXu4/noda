@@ -1,7 +1,7 @@
 const router = express.Router();
 const http = require('http');
 const hostname = 'localhost';
-const port = 3000;
+const port = process.env.PORT || 5000;
 
 var friends = require("./friends.json");
 const express = require("express"); // Once for all times
@@ -70,5 +70,6 @@ const server = http.createServer((request, response) => {
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
+
 
 module.exports = router;
