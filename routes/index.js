@@ -1,10 +1,13 @@
-const router = express.Router();
 const http = require('http');
 const hostname = 'localhost';
 const port = process.env.PORT || 5000;
 
 var friends = require("./friends.json");
 const express = require("express"); // Once for all times
+
+const router = express.Router();
+
+
 
 const server = http.createServer((request, response) => {
     response.statusCode = 200;
